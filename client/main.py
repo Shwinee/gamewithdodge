@@ -1,17 +1,9 @@
-import random
-import time
+import requests
 
-thing = 10
-thing = thing+1
+url = 'http://localhost:3000/api'
 
+i = input("what is ur name: ");
+correct_payload = {'i': i}
 
-while(thing > 1):
-    thingh = (random.randint(1, 3))
-    if(thingh == 1):
-        print("ni")
-    if (thingh == 2):
-        print("titties")
-    if (thingh == 3):
-        print("jacob do your parents beat you")
-    time.sleep(5)
-    thing = thing-1
+r = requests.post(url, data=correct_payload)
+print(r.text)
