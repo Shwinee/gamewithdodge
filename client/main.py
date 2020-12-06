@@ -10,7 +10,7 @@ print(r.text)
 
 import turtle
 
-#screen
+#screen and player
 wn = turtle.Screen()
 wn.bgcolor("white")
 player = turtle.Turtle()
@@ -19,6 +19,9 @@ player.shape("triangle")
 speed = 0
 player.penup()
 turtle.listen()
+player2 = turtle.Turtle()
+player2.color("red")
+player2.shape("triangle")
 
 #borders
 mypen = turtle.Turtle()
