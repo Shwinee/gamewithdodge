@@ -9,6 +9,7 @@ r = requests.post(url, data=correct_payload)
 print(r.text)
 
 
+
 import turtle
 
 
@@ -32,10 +33,12 @@ player2.penup()
 player.hideturtle()
 player.goto(155, -20)
 player.showturtle()
+player.setheading(90)
 
 player2.hideturtle()
 player2.goto(190, -20)
 player2.showturtle()
+player2.setheading(90)
 
 #borders
 mypen = turtle.Turtle()
