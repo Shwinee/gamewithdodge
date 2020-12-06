@@ -8,7 +8,10 @@ correct_payload = {'i': i}
 r = requests.post(url, data=correct_payload)
 print(r.text)
 
+
 import turtle
+
+
 
 #screen and player
 wn = turtle.Screen()
@@ -22,6 +25,17 @@ turtle.listen()
 player2 = turtle.Turtle()
 player2.color("red")
 player2.shape("triangle")
+player2.penup()
+
+
+#starting point
+player.hideturtle()
+player.goto(155, -20)
+player.showturtle()
+
+player2.hideturtle()
+player2.goto(190, -20)
+player2.showturtle()
 
 #borders
 mypen = turtle.Turtle()
@@ -53,6 +67,9 @@ for side in range(1):
     mypen.forward(120)
 mypen.hideturtle()
 
+
+
+
 #definitions
 def turnleft():
     player.left(15)
@@ -70,6 +87,11 @@ turtle.onkey(turnleft, "Left")
 turtle.onkey(turnright, "Right")
 turtle.onkey(increasespeed, "Up")
 turtle.onkey(decreasespeed, "Down")
+
+
+
+
+
 #speed
 while True:
     player.forward(speed)
