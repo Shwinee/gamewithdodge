@@ -6,7 +6,7 @@ import json
 
 lastx = 0
 lasty = 0
-playerid = 1
+playerid = 2
 #screen and player
 wn = turtle.Screen()
 wn.bgcolor("white")
@@ -88,6 +88,8 @@ while True:
     p2a[1] = p2a[1].replace('"', '')
     p2a[1] = p2a[1].replace(']', '')
     player2.setpos(float(p2a[0]), float(p2a[1]))
+    print(p2a[0])
+    print(p2a[1])
     lastx = ppos[0]
     lasty = ppos[1]
-    time.sleep(0.1)
+    time.sleep(0.5)
