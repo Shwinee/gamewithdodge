@@ -1,13 +1,14 @@
-import requests
 import turtle
 import time
 import json
+import requests
+
+
 
 
 lastx = 0
 lasty = 0
 playerid = 2
-#screen and player
 wn = turtle.Screen()
 wn.bgcolor("white")
 player = turtle.Turtle()
@@ -23,6 +24,17 @@ player2.color("red")
 player2.shape("triangle")
 player2.penup()
 
+
+#starting point
+player.hideturtle()
+player.goto(155, -20)
+player.showturtle()
+player.setheading(90)
+
+player2.hideturtle()
+player2.goto(190, -20)
+player2.showturtle()
+player2.setheading(90)
 
 #borders
 mypen = turtle.Turtle()
@@ -44,6 +56,18 @@ for side in range(8):
     mypen.forward(150)
     mypen.left(45)
 mypen.hideturtle()
+#starting line
+mypen = turtle.Turtle()
+mypen.up()
+mypen.setposition(131, 0)
+mypen.pendown()
+mypen.pensize(3)
+for side in range(1):
+    mypen.forward(120)
+mypen.hideturtle()
+
+
+
 
 #definitions
 def turnleft():
@@ -62,6 +86,11 @@ turtle.onkey(turnleft, "Left")
 turtle.onkey(turnright, "Right")
 turtle.onkey(increasespeed, "Up")
 turtle.onkey(decreasespeed, "Down")
+
+
+
+
+
 #speed
 if playerid == 1:
     url = 'http://localhost:3000/ptwo'
@@ -90,4 +119,4 @@ while True:
     player2.setpos(float(p2a[0]), float(p2a[1]))
     lastx = ppos[0]
     lasty = ppos[1]
-    time.sleep(0.5)
+    time.sleep(0.1)

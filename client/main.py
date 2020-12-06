@@ -1,32 +1,14 @@
-import requests
-<<<<<<< HEAD
-
-url = 'http://localhost:3000/api'
-
-i = input("what is ur name: ");
-correct_payload = {'i': i}
-
-r = requests.post(url, data=correct_payload)
-print(r.text)
-
-
-
-=======
->>>>>>> 3448d85cad9e21697ab97b661f8037718d434db9
 import turtle
 import time
 import json
+import requests
 
 
-<<<<<<< HEAD
 
 
-=======
 lastx = 0
 lasty = 0
 playerid = 1
->>>>>>> 3448d85cad9e21697ab97b661f8037718d434db9
-#screen and player
 wn = turtle.Screen()
 wn.bgcolor("white")
 player = turtle.Turtle()
@@ -42,7 +24,6 @@ player2.color("red")
 player2.shape("triangle")
 player2.penup()
 
-<<<<<<< HEAD
 
 #starting point
 player.hideturtle()
@@ -54,8 +35,6 @@ player2.hideturtle()
 player2.goto(190, -20)
 player2.showturtle()
 player2.setheading(90)
-=======
->>>>>>> 3448d85cad9e21697ab97b661f8037718d434db9
 
 #borders
 mypen = turtle.Turtle()
