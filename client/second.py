@@ -1,31 +1,12 @@
 import requests
-<<<<<<< HEAD
-
-url = 'http://localhost:3000/api'
-
-i = input("what is ur name: ");
-correct_payload = {'i': i}
-
-r = requests.post(url, data=correct_payload)
-print(r.text)
-
-
-
-=======
->>>>>>> 3448d85cad9e21697ab97b661f8037718d434db9
 import turtle
 import time
 import json
 
 
-<<<<<<< HEAD
-
-
-=======
 lastx = 0
 lasty = 0
-playerid = 1
->>>>>>> 3448d85cad9e21697ab97b661f8037718d434db9
+playerid = 2
 #screen and player
 wn = turtle.Screen()
 wn.bgcolor("white")
@@ -42,20 +23,6 @@ player2.color("red")
 player2.shape("triangle")
 player2.penup()
 
-<<<<<<< HEAD
-
-#starting point
-player.hideturtle()
-player.goto(155, -20)
-player.showturtle()
-player.setheading(90)
-
-player2.hideturtle()
-player2.goto(190, -20)
-player2.showturtle()
-player2.setheading(90)
-=======
->>>>>>> 3448d85cad9e21697ab97b661f8037718d434db9
 
 #borders
 mypen = turtle.Turtle()
@@ -77,18 +44,6 @@ for side in range(8):
     mypen.forward(150)
     mypen.left(45)
 mypen.hideturtle()
-#starting line
-mypen = turtle.Turtle()
-mypen.up()
-mypen.setposition(131, 0)
-mypen.pendown()
-mypen.pensize(3)
-for side in range(1):
-    mypen.forward(120)
-mypen.hideturtle()
-
-
-
 
 #definitions
 def turnleft():
@@ -107,11 +62,6 @@ turtle.onkey(turnleft, "Left")
 turtle.onkey(turnright, "Right")
 turtle.onkey(increasespeed, "Up")
 turtle.onkey(decreasespeed, "Down")
-
-
-
-
-
 #speed
 if playerid == 1:
     url = 'http://localhost:3000/ptwo'
@@ -138,6 +88,8 @@ while True:
     p2a[1] = p2a[1].replace('"', '')
     p2a[1] = p2a[1].replace(']', '')
     player2.setpos(float(p2a[0]), float(p2a[1]))
+    print(p2a[0])
+    print(p2a[1])
     lastx = ppos[0]
     lasty = ppos[1]
-    time.sleep(0.1)
+    time.sleep(0.5)
