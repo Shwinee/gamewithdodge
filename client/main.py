@@ -43,6 +43,15 @@ for side in range(8):
     mypen.forward(150)
     mypen.left(45)
 mypen.hideturtle()
+#starting line
+mypen = turtle.Turtle()
+mypen.up()
+mypen.setposition(131, 0)
+mypen.pendown()
+mypen.pensize(3)
+for side in range(1):
+    mypen.forward(120)
+mypen.hideturtle()
 
 #definitions
 def turnleft():
